@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="sportsStore">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body ng-controller="sportsStoreCtrl">
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">SPORTS STORE</a>
+        <cart-summary />
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
+    <script src="~/Scripts/sportsStore.js"></script>
+    @RenderSection("Scripts", false)
+    <script src="~/Components/Cart/cart.js"></script>
+</body>
+</html>

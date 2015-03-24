@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "SportsStore";
+}
+
+<div class="alert alert-danger" ng-show="data.error">
+    Error ({{data.error.status}}). The product data was not loaded.
+    <a href="/" class="alert-link">Click here to try again</a>
+</div>
+
+<div ng-view></div>
+
+@section Scripts{
+    <script src="~/Scripts/Filters/customFilters.js"></script>
+    <script src="~/Scripts/Product/ProductListCtrl.js"></script>
+    <script src="~/Components/Checkout/checkoutController.js"></script>
+}
